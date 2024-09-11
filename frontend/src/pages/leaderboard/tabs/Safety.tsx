@@ -91,7 +91,7 @@ function Safety({ gameInfo }: { gameInfo: GameInfo }) {
         alignItems="center"
       >
         <Text fontWeight="extrabold">
-          The Cottage Guard: ({tmmrw.getMonth() + 1}/{tmmrw.getDate()})
+          The Cottage Guard Recipient: ({now.getMonth() + 1}/{now.getDate()})
         </Text>
         <Text textAlign="center">{immunity}</Text>
       </Card>
@@ -106,7 +106,7 @@ function Safety({ gameInfo }: { gameInfo: GameInfo }) {
         alignItems="center"
       >
         <Text fontWeight="extrabold">
-          Cursed by Tina's Spell: ({tmmrw.getMonth() + 1}/{tmmrw.getDate()})
+          Cursed by Tina's Spell: ({now.getMonth() + 1}/{now.getDate()})
         </Text>
         <Text textAlign="center">{killDeduction}</Text>
       </Card>
