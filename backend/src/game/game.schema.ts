@@ -86,6 +86,18 @@ export class Game extends mongoose.Document<mongoose.Schema.Types.ObjectId> {
    */
   @Prop({ type: [String], required: false, default: [] })
   safeties: string[];
+
+  /**
+   * A list of users who are granted immunity, shown 1 a day
+   */
+  @Prop({ type: [String], required: false, default: [] })
+  immunities: string[];
+
+  /**
+   * A list of users who had a kill deducted, shown 1 a day
+   */
+  @Prop({ type: [String], required: false, default: [] })
+  killDeductions: string[];
 }
 
 export const GameSchema = SchemaFactory.createForClass(Game);

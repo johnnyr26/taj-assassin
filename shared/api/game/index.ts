@@ -10,4 +10,6 @@ export type GameInfo = {
   events: { title: string; time: string }[];
   startTime: string;
   safeties: string[];
+  immunities: string[];
+  killDeductions: string[];
 };

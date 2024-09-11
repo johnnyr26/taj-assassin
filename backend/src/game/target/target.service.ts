@@ -287,10 +287,18 @@ export class TargetService {
       const killer = killers[p.id]
         ? users[players[killers[p.id]].userId.toString()]
         : undefined;
+
+      /* Finds the number of times the persona appears on the kill deduction list */
+      const numKillDeductions = game.killDeductions.reduce(
+        (acc, playerName) =>
+          acc + (playerName === `${user.firstName} ${user.surname}` ? 1 : 0),
+        0,
+      );
+
       const info: LeaderboardPlayerInfo = {
         playerId: p.id,
         name: `${user.firstName} ${user.surname}`,
-        kills: killCounts[p.id] ?? 0,
+        kills: (killCounts[p.id] ?? 0) - numKillDeductions,
         alive: p.status === PlayerStatus.ALIVE,
         killedBy: killer ? `${killer.firstName} ${killer.surname}` : undefined,
       };

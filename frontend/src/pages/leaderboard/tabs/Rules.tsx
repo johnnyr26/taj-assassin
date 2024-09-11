@@ -32,7 +32,7 @@ function Rules() {
         <Text fontWeight="normal" align="center">
           These rules are subject to slight changes, however changes will be
           announced{" "}
-          <a href="https://groupme.com/join_group/96794581/Myt3F2CO">
+          <a href="https://groupme.com/join_group/103185270/HMdGgz2S">
             <Text display="inline" color="blue.400">
               in the GroupMe
             </Text>
@@ -41,6 +41,51 @@ function Rules() {
         </Text>
       </Card>
       <UnorderedList maxWidth="500px">
+        <ListItem fontWeight="bold">
+          New Additions for 2024
+          <UnorderedList fontWeight="normal">
+            <ListItem>
+              These new additions are only applicable for the{" "}
+              <Text display="inline" fontWeight="bold">
+                FIRST TWO
+              </Text>{" "}
+              rounds of the game.
+              <UnorderedList fontWeight="normal">
+                <ListItem>
+                  <Text display="inline" fontWeight="bold">
+                    The Cottage Guard:{" "}
+                  </Text>
+                  Each day, one lucky survivor will be randomly granted full
+                  immunity, shielding them from elimination for a full 24 hours.
+                  During this time, they are safe from any attempts
+                  to remove them from the game. There's no need for them to
+                  perform any special tasks or safety measures—this protection
+                  is automatic. Despite their immunity, they can still eliminate
+                  their target, continuing to play without fear. If your target
+                  happens to be immune for the day, you will simply have to
+                  wait—and watch—knowing they are just out of reach, while you
+                  remain vulnerable, exposed, and at their mercy.
+                </ListItem>
+                <ListItem>
+                  <Text display="inline" fontWeight="bold">
+                    Tina's Spell:{" "}
+                  </Text>
+                  Despite Tina's mysterious absence from the game this year, the
+                  harrowing echoes of the 2023 Taj Assassin Massacre still hang
+                  like a shadow over the club. Every day, a single survivor is
+                  selected at random, and one of their kills is mercilessly
+                  erased. The dead remain undisturbed—trapped forever in their
+                  cold silence. If the deduction caused the chosen person to
+                  fall below the threshold necessary to advance to the next
+                  round, they must claw their way back and make up for the
+                  deduction. There is no escape, only the slow, creeping
+                  realization that survival demands a price, one paid in fear,
+                  desperation, and death.
+                </ListItem>
+              </UnorderedList>
+            </ListItem>
+          </UnorderedList>
+        </ListItem>
         <ListItem fontWeight="bold">
           Getting someone "out"
           <UnorderedList fontWeight="normal">
@@ -53,7 +98,7 @@ function Rules() {
             <ListItem>
               The kill must be caught on video and uploaded to the GroupMe,
               linked{" "}
-              <a href="https://groupme.com/join_group/96794581/Myt3F2CO">
+              <a href="https://groupme.com/join_group/103185270/HMdGgz2S">
                 <Text display="inline" color="blue.400">
                   HERE
                 </Text>
@@ -129,9 +174,10 @@ function Rules() {
                   Cottage is safe inside the building and in the
                   courtyard/backyard. The front yard of the building, prior to
                   entering the doors, is NOT safe. No other eating clubs are
-                  safe (nor dining halls). The exception is during nights out,
-                  from 10pm-2am, the insides of other eating clubs are safe,
-                  however the street is not.
+                  safe (nor dining halls). The exceptions are during nights out
+                  (from 10pm-2am) and darties, the insides of other eating clubs
+                  are safe, however the street is not. No one besides the
+                  residents of Cottage is allowed to stay overnight.
                 </ListItem>
                 <ListItem>
                   Practice and competition (during, and preparing for), but not
@@ -158,10 +204,7 @@ function Rules() {
         <ListItem fontWeight="bold">
           Timeline
           <UnorderedList fontWeight="normal">
-            <ListItem>
-              There will be a total of 4 rounds, summing up to 22 days of
-              in-game chaos (excluding breaks).
-            </ListItem>
+            <ListItem>There will be a total of 4 rounds.</ListItem>
             <ListItem>
               At the end of every round, all targets will be shuffled.
             </ListItem>
@@ -170,7 +213,7 @@ function Rules() {
               safety, no safe words, and no safe zones.
             </ListItem>
             <ListItem>
-              At the end of 11/1, if there is still more than a single person
+              At the end of 10/10, if there is still more than a single person
               remaining, there will be a duel between the two remaining
               participants with the most kills.
             </ListItem>

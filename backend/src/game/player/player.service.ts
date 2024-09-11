@@ -83,6 +83,14 @@ export class PlayerService {
   }
 
   /**
+   * @param gameId id of the game
+   * @returns list of all living players in the game
+   */
+  async findAlivePlayers(gameId: MongoId): Promise<Player[] | null> {
+    return await this.model.find({ gameId: gameId, status: 'ALIVE' }).exec();
+  }
+
+  /**
    * Get a player simply via their user ID. NOTE: This just gets the most
    * recent player, and totally breaks when there are multiple games.
    * @param userId The ID of the user to find

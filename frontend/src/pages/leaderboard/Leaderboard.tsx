@@ -161,7 +161,7 @@ function LeaderboardItem({
 }: {
   info: LeaderboardPlayerInfo;
   ranking: number;
-}) {
+  }) {
   return (
     <Card
       variant="outline"

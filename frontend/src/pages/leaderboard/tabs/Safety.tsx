@@ -11,6 +11,9 @@ function Safety({ gameInfo }: { gameInfo: GameInfo }) {
   let today = "No safety today.";
   let tomorrow = "No safety tomorrow.";
 
+  let immunity = "No immunity today.";
+  let killDeduction = "No spell casted today.";
+
   // Get the current
   const now = new Date();
   const tmmrw = new Date(now);
@@ -31,7 +34,11 @@ function Safety({ gameInfo }: { gameInfo: GameInfo }) {
 
   // For today
   if (diffDays >= 0 && diffDays < gameInfo.safeties.length) {
-    if (gameInfo.safeties[diffDays] !== "") today = gameInfo.safeties[diffDays];
+    if (gameInfo.safeties[diffDays] !== "") {
+      today = gameInfo.safeties[diffDays];
+      immunity = gameInfo.immunities[diffDays]
+      killDeduction = gameInfo.killDeductions[diffDays]
+    }
   }
 
   // For tomorrow
@@ -72,6 +79,36 @@ function Safety({ gameInfo }: { gameInfo: GameInfo }) {
           Tomorrow's safety ({tmmrw.getMonth() + 1}/{tmmrw.getDate()})
         </Text>
         <Text textAlign="center">{tomorrow}</Text>
+      </Card>
+      <Card
+        variant="outline"
+        boxShadow={"lg"}
+        width="90%"
+        minWidth="400px"
+        padding={4}
+        backgroundColor="orange.100"
+        display="flex"
+        alignItems="center"
+      >
+        <Text fontWeight="extrabold">
+          The Cottage Guard: ({tmmrw.getMonth() + 1}/{tmmrw.getDate()})
+        </Text>
+        <Text textAlign="center">{immunity}</Text>
+      </Card>
+      <Card
+        variant="outline"
+        boxShadow={"lg"}
+        width="90%"
+        minWidth="400px"
+        padding={4}
+        backgroundColor="orange.100"
+        display="flex"
+        alignItems="center"
+      >
+        <Text fontWeight="extrabold">
+          Cursed by Tina's Spell: ({tmmrw.getMonth() + 1}/{tmmrw.getDate()})
+        </Text>
+        <Text textAlign="center">{killDeduction}</Text>
       </Card>
     </Stack>
   );
