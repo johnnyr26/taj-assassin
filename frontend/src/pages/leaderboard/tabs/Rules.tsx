@@ -282,7 +282,7 @@ function Rules() {
             </ListItem>
             <ListItem>
               <ListIcon as={TimeIcon} color="red.500" />
-              END of GAME: 10/9 11:59PM
+              END of GAME: 10/10 11:59PM
             </ListItem>
           </List>
         </ListItem>
