@@ -29,6 +29,9 @@ function Rules() {
         alignItems="center"
       >
         <Text fontWeight="extrabold">WARNING</Text>
+        <Text fontWeight="normal" align="center" mb="15px">
+          "This is just a game, please chill out." - Andres Colmenares
+        </Text>
         <Text fontWeight="normal" align="center">
           These rules are subject to slight changes, however changes will be
           announced{" "}
@@ -47,7 +50,7 @@ function Rules() {
             <ListItem>
               These new additions are only applicable for the{" "}
               <Text display="inline" fontWeight="bold">
-                FIRST TWO
+                FIRST
               </Text>{" "}
               rounds of the game.
               <UnorderedList fontWeight="normal">
@@ -55,12 +58,12 @@ function Rules() {
                   <Text display="inline" fontWeight="bold">
                     The Cottage Guard:{" "}
                   </Text>
-                  Each day, one lucky survivor will be randomly granted full
-                  immunity, shielding them from elimination for a full 24 hours.
-                  During this time, they are safe from any attempts
-                  to remove them from the game. There's no need for them to
-                  perform any special tasks or safety measures—this protection
-                  is automatic. Despite their immunity, they can still eliminate
+                  On a random day, one lucky survivor will be randomly granted
+                  full immunity, shielding them from elimination for a full 24
+                  hours. During this time, they are safe from any attempts to
+                  remove them from the game. There's no need for them to perform
+                  any special tasks or safety measures—this protection is
+                  automatic. Despite their immunity, they can still eliminate
                   their target, continuing to play without fear. If your target
                   happens to be immune for the day, you will simply have to
                   wait—and watch—knowing they are just out of reach, while you
@@ -72,13 +75,13 @@ function Rules() {
                   </Text>
                   Despite Tina's mysterious absence from the game this year, the
                   harrowing echoes of the 2023 Taj Assassin Massacre still hang
-                  like a shadow over the club. Every day, a single survivor is
-                  selected at random, and one of their kills is mercilessly
-                  erased. The dead remain undisturbed—trapped forever in their
-                  cold silence. If the deduction caused the chosen person to
-                  fall below the threshold necessary to advance to the next
-                  round, they must claw their way back and make up for the
-                  deduction. There is no escape, only the slow, creeping
+                  like a shadow over the club. On a randomly haunting day, a
+                  single survivor is selected at random, and one of their kills
+                  is mercilessly erased. The dead remain undisturbed—trapped
+                  forever in their cold silence. If the deduction caused the
+                  chosen person to fall below the threshold necessary to advance
+                  to the next round, they must claw their way back and make up
+                  for the deduction. There is no escape, only the slow, creeping
                   realization that survival demands a price, one paid in fear,
                   desperation, and death.
                 </ListItem>
@@ -161,6 +164,10 @@ function Rules() {
               This presents an opportunity for everyone to eliminate their
               target, regardless of who they are assigned.
             </ListItem>
+            <ListItem>
+              Parents day (October 5th) will be a safe day. No kills will be
+              allowed on that day. The game will resume on October 6th.
+            </ListItem>
           </UnorderedList>
         </ListItem>
         <ListItem fontWeight="bold">
@@ -191,6 +198,17 @@ function Rules() {
                   Classrooms are safe ONLY during midterms/exams. More
                   specifically, the classroom is safe while you are inside
                   (including as you are prepping and finishing the exam).
+                </ListItem>
+                <ListItem>
+                  Showers are ONLY a safe zone if the target is actively
+                  showering. The shower must be turned on and the target must be
+                  in the shower in order to be safe. Brushing teeth, washing
+                  hands, and GRWM videos are fair game.
+                </ListItem>
+                <ListItem>
+                  The target cannot be forcibly physically removed from a safe
+                  zone. The target is no longer safe once they move themself out
+                  of the safe zone.
                 </ListItem>
               </UnorderedList>
             </ListItem>
@@ -228,39 +246,43 @@ function Rules() {
           <List fontWeight="normal">
             <ListItem>
               <ListIcon as={ViewIcon} color="green.500" />
-              INITIAL TARGETS ANNOUNCED: 9/29 9AM
+              INITIAL TARGETS ANNOUNCED: 9/14
             </ListItem>
             <ListItem>
               <ListIcon as={TimeIcon} color="green.500" />
-              START of ROUND 1: 10/2 9AM
+              START of ROUND 1: 9/16 9AM
             </ListItem>
             <ListItem>
               <ListIcon as={TimeIcon} color="red.500" />
-              END of ROUND 1: 10/8 11:59PM (1 total kill required)
+              END of ROUND 1: 9/22 11:59PM (1 total kill required)
             </ListItem>
             <ListItem>
               <ListIcon as={TimeIcon} color="green.500" />
-              START of ROUND 2: 10/9 9AM
+              START of ROUND 2: 9/23 9AM
             </ListItem>
             <ListItem>
               <ListIcon as={TimeIcon} color="red.500" />
-              END of ROUND 2: 10/13 11:59PM (2 total kills required)
+              END of ROUND 2: 9/29 11:59PM (2 total kills required)
             </ListItem>
             <ListItem>
               <ListIcon as={TimeIcon} color="green.500" />
-              START of ROUND 3: 10/23 9AM
-            </ListItem>
-            <ListItem>
-              <ListIcon as={TimeIcon} color="red.500" />
-              END of ROUND 3: 10/29 11:59PM (3 total kills required)
+              START of ROUND 3: 9/30 9AM
             </ListItem>
             <ListItem>
               <ListIcon as={TimeIcon} color="green.500" />
-              START of ANARCHY: 10/30 9AM
+              SAFE DAY (Parents Day): 10/5
             </ListItem>
             <ListItem>
               <ListIcon as={TimeIcon} color="red.500" />
-              END of GAME: 11/1 11:59PM
+              END of ROUND 3: 10/6 11:59PM (3 total kills required)
+            </ListItem>
+            <ListItem>
+              <ListIcon as={TimeIcon} color="green.500" />
+              START of ANARCHY: 10/7 9AM
+            </ListItem>
+            <ListItem>
+              <ListIcon as={TimeIcon} color="red.500" />
+              END of GAME: 10/9 11:59PM
             </ListItem>
           </List>
         </ListItem>
@@ -268,12 +290,12 @@ function Rules() {
           Additional
           <UnorderedList fontWeight="normal">
             <ListItem>
-              Let me know if the website is bugging out or it breaks completely,
-              I'll fix it ASAP.
+              Let Johnny know if the website is bugging out or it breaks
+              completely, He will fix it ASAP.
             </ListItem>
             <ListItem>
-              If there is a dispute, it will be ruled by majority vote of 1
-              (me).
+              If there is a dispute, it will be ruled by the Assassin Overlords
+              (Johnny & Tina).
             </ListItem>
           </UnorderedList>
         </ListItem>
