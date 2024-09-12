@@ -52,7 +52,7 @@ function Rules() {
               <Text display="inline" fontWeight="bold">
                 FIRST
               </Text>{" "}
-              rounds of the game.
+              round of the game.
               <UnorderedList fontWeight="normal">
                 <ListItem>
                   <Text display="inline" fontWeight="bold">
