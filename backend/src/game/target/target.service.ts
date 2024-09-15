@@ -298,7 +298,7 @@ export class TargetService {
       const info: LeaderboardPlayerInfo = {
         playerId: p.id,
         name: `${user.firstName} ${user.surname}`,
-        kills: (killCounts[p.id] ?? 0) - numKillDeductions,
+        kills: (killCounts[p.id] ?? 0) + numKillDeductions,
         alive: p.status === PlayerStatus.ALIVE,
         killedBy: killer ? `${killer.firstName} ${killer.surname}` : undefined,
       };

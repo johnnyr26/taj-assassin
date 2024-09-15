@@ -38,24 +38,24 @@ export class GameController {
       });
     }
 
-    const now = new Date();
-    // When the first safety should be
-    const start = new Date(game.startTime.toISOString());
+    // const now = new Date();
+    // // When the first safety should be
+    // const start = new Date(game.startTime.toISOString());
 
-    // Use this difference in order to index into the safeties array and display the correct ones
-    const diff = now.getTime() - start.getTime();
-    let diffDays = Math.ceil(diff / (1000 * 3600 * 24));
-    diffDays -= 1;
+    // // Use this difference in order to index into the safeties array and display the correct ones
+    // const diff = now.getTime() - start.getTime();
+    // let diffDays = Math.ceil(diff / (1000 * 3600 * 24));
+    // diffDays -= 1;
 
-    // Selects a random person for immunity.
-    if (diffDays === game.immunities.length) {
-      await this.gme.grantImmunity(gameId, this.plyr);
-    }
+    // // Selects a random person for immunity.
+    // if (diffDays === game.immunities.length) {
+    //   await this.gme.grantImmunity(gameId, this.plyr);
+    // }
 
-    // Selects a random person for kill deduction
-    if (diffDays === game.killDeductions.length) {
-      await this.gme.deductKill(gameId, this.plyr);
-    }
+    // // Selects a random person for kill deduction
+    // if (diffDays === game.killDeductions.length) {
+    //   await this.gme.deductKill(gameId, this.plyr);
+    // }
 
     // Fetch game again with new immunity
     game = await this.gme.findById(gameId);
