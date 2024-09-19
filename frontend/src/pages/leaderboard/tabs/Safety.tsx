@@ -1,12 +1,18 @@
+import { useState } from 'react';
 import { GameInfo } from "shared/api/game";
 import { SafetyCountdown } from "components/Countdown";
-import { Card, Stack, Text } from "@chakra-ui/react";
+import { Button, Card, Stack, Text, Textarea } from "@chakra-ui/react";
+
+import { submitSafety } from "api/game/safety";
 
 /**
  * A page that lists today's and tomorrow's safety. Will switch at midnight EST
  * everyday, and is grabbed from the game info object.
  */
 function Safety({ gameInfo }: { gameInfo: GameInfo }) {
+  // Safety Input
+  const [safety, setSafety] = useState<string>("");
+
   // Text to display
   let today = "No safety today.";
   let tomorrow = "No safety tomorrow.";
@@ -36,8 +42,8 @@ function Safety({ gameInfo }: { gameInfo: GameInfo }) {
   if (diffDays >= 0 && diffDays < gameInfo.safeties.length) {
     if (gameInfo.safeties[diffDays] !== "") {
       today = gameInfo.safeties[diffDays];
-      immunity = gameInfo.immunities[diffDays]
-      killDeduction = gameInfo.killDeductions[diffDays]
+      // immunity = gameInfo.immunities[diffDays]
+      // killDeduction = gameInfo.killDeductions[diffDays]
     }
   }
 
@@ -45,6 +51,16 @@ function Safety({ gameInfo }: { gameInfo: GameInfo }) {
   if (diffDays + 1 >= 0 && diffDays + 1 < gameInfo.safeties.length) {
     if (gameInfo.safeties[diffDays + 1] !== "")
       tomorrow = gameInfo.safeties[diffDays + 1];
+  }
+
+  const handleSubmit = async () => {
+    if (safety.trim() === "") {
+      alert("You did not enter a safety. Please try again");
+      return;
+    }
+    await submitSafety(safety);
+    setSafety("");
+    alert("Safety has been submitted successfully.");
   }
 
   return (
@@ -80,36 +96,14 @@ function Safety({ gameInfo }: { gameInfo: GameInfo }) {
         </Text>
         <Text textAlign="center">{tomorrow}</Text>
       </Card>
-      <Card
-        variant="outline"
-        boxShadow={"lg"}
-        width="90%"
-        minWidth="400px"
-        padding={4}
-        backgroundColor="orange.100"
-        display="flex"
-        alignItems="center"
-      >
-        <Text fontWeight="extrabold">
-          The Cottage Guard Recipient: ({now.getMonth() + 1}/{now.getDate()})
-        </Text>
-        <Text textAlign="center">{immunity}</Text>
-      </Card>
-      <Card
-        variant="outline"
-        boxShadow={"lg"}
-        width="90%"
-        minWidth="400px"
-        padding={4}
-        backgroundColor="orange.100"
-        display="flex"
-        alignItems="center"
-      >
-        <Text fontWeight="extrabold">
-          Cursed by Tina's Spell: ({now.getMonth() + 1}/{now.getDate()})
-        </Text>
-        <Text textAlign="center">{killDeduction}</Text>
-      </Card>
+      {gameInfo?.role === "ADMIN" && (
+        <>
+          <Textarea placeholder="Create new safety" onChange={(e) => setSafety(e.target.value)} h={100} value={safety} />
+          <Button onClick={async () => {
+            await handleSubmit();
+          }}>Submit</Button>
+        </>
+      )}
     </Stack>
   );
 }

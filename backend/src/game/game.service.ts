@@ -29,6 +29,23 @@ export class GameService {
     return query[0];
   }
 
+  async submitSafety(gameId: MongoId, safety: string) {
+    const query = await this.gameModel.find({ _id: gameId });
+    if (query.length == 0) {
+      throw new GameNotFoundException(gameId);
+    }
+    const game = await this.findById(gameId);
+    // Append the safety to the safeties list
+    game.safeties = game.safeties || []; // Ensure safeties exists
+    game.safeties.push(safety);
+
+    // Save the updated game model
+    await this.gameModel.updateOne(
+      { _id: gameId },
+      { $set: { safeties: game.safeties } },
+    );
+  }
+
   async grantImmunity(gameId: MongoId, plyr: PlayerService) {
     const alivePlayers = await plyr.findAlivePlayers(gameId);
     if (alivePlayers && alivePlayers.length > 0) {

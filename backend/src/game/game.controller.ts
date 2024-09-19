@@ -1,4 +1,4 @@
-import { Controller, Get, Post, Req, UseGuards } from '@nestjs/common';
+import { Controller, Get, Post, Query, Req, UseGuards } from '@nestjs/common';
 import { GameService } from './game.service';
 import { getUserIdFromRequest } from 'utils/request';
 import { Request } from 'express';
@@ -9,6 +9,7 @@ import { ConfigService } from '@nestjs/config';
 import { GameInfo } from 'shared/api/game';
 import { PlayerService } from './player/player.service';
 import { PlayerRole } from './player/player.schema';
+import { QueryRequired } from 'utils/decorators';
 
 @Controller('game')
 export class GameController {
@@ -17,6 +18,16 @@ export class GameController {
     private cfg: ConfigService,
     private plyr: PlayerService,
   ) {}
+
+  @Post('submitSafety')
+  @UseGuards(JwtAuthGuard)
+  async submitSafety(
+    @QueryRequired('gameId') gameIdQuery: string,
+    @QueryRequired('safety') safety: string,
+  ) {
+    const gameId = new MongoId(gameIdQuery);
+    await this.gme.submitSafety(gameId, safety);
+  }
 
   @Get('getActive')
   @UseGuards(JwtAuthGuard)
