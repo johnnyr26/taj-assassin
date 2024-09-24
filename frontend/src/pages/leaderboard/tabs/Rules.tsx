@@ -45,51 +45,6 @@ function Rules() {
       </Card>
       <UnorderedList maxWidth="500px">
         <ListItem fontWeight="bold">
-          New Additions for 2024
-          <UnorderedList fontWeight="normal">
-            <ListItem>
-              These new additions are only applicable for the{" "}
-              <Text display="inline" fontWeight="bold">
-                FIRST
-              </Text>{" "}
-              round of the game.
-              <UnorderedList fontWeight="normal">
-                <ListItem>
-                  <Text display="inline" fontWeight="bold">
-                    The Cottage Guard:{" "}
-                  </Text>
-                  On a random day, one lucky survivor will be randomly granted
-                  full immunity, shielding them from elimination for a full 24
-                  hours. During this time, they are safe from any attempts to
-                  remove them from the game. There's no need for them to perform
-                  any special tasks or safety measures—this protection is
-                  automatic. Despite their immunity, they can still eliminate
-                  their target, continuing to play without fear. If your target
-                  happens to be immune for the day, you will simply have to
-                  wait—and watch—knowing they are just out of reach, while you
-                  remain vulnerable, exposed, and at their mercy.
-                </ListItem>
-                <ListItem>
-                  <Text display="inline" fontWeight="bold">
-                    Tina's Spell:{" "}
-                  </Text>
-                  Despite Tina's mysterious absence from the game this year, the
-                  harrowing echoes of the 2023 Taj Assassin Massacre still hang
-                  like a shadow over the club. On a randomly haunting day, a
-                  single survivor is selected at random, and one of their kills
-                  is mercilessly erased. The dead remain undisturbed—trapped
-                  forever in their cold silence. If the deduction caused the
-                  chosen person to fall below the threshold necessary to advance
-                  to the next round, they must claw their way back and make up
-                  for the deduction. There is no escape, only the slow, creeping
-                  realization that survival demands a price, one paid in fear,
-                  desperation, and death.
-                </ListItem>
-              </UnorderedList>
-            </ListItem>
-          </UnorderedList>
-        </ListItem>
-        <ListItem fontWeight="bold">
           Getting someone "out"
           <UnorderedList fontWeight="normal">
             <ListItem>
