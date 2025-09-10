@@ -35,7 +35,7 @@ function Rules() {
         <Text fontWeight="normal" align="center">
           These rules are subject to slight changes, however changes will be
           announced{" "}
-          <a href="https://groupme.com/join_group/103185270/HMdGgz2S">
+          <a href="https://groupme.com/join_group/110084850/ZiIyoaQN">
             <Text display="inline" color="blue.400">
               in the GroupMe
             </Text>
@@ -44,6 +44,31 @@ function Rules() {
         </Text>
       </Card>
       <UnorderedList maxWidth="500px">
+        <ListItem fontWeight="bold">
+          New Rules (2025)
+          <UnorderedList fontWeight="normal">
+            <ListItem>
+              <Text fontWeight="bold" display="inline">
+                Kendall Dean Rule:{" "}
+              </Text>
+              Showers and restrooms ARE safe.
+            </ListItem>
+            <ListItem>Locker rooms ARE safe.</ListItem>
+            <ListItem>
+              Travel between the locker room and the field/court for practices
+              or competitions is considered SAFE. The player must be visibly
+              equipped (wearing uniform, carrying equipments, etc).
+            </ListItem>
+            <ListItem>
+              Travel to and from practices or competitions (e.g., from Cottage,
+              dorm, TigerTransit, or other locations) is NOT considered safe.
+            </ListItem>
+            <ListItem>
+              Any kill that occurs without video evidence is not valid. If the
+              video cannot be shared, then the kill is not vaild.
+            </ListItem>
+          </UnorderedList>
+        </ListItem>
         <ListItem fontWeight="bold">
           Getting someone "out"
           <UnorderedList fontWeight="normal">
@@ -56,7 +81,7 @@ function Rules() {
             <ListItem>
               The kill must be caught on video and uploaded to the GroupMe,
               linked{" "}
-              <a href="https://groupme.com/join_group/103185270/HMdGgz2S">
+              <a href="https://groupme.com/join_group/110084850/ZiIyoaQN">
                 <Text display="inline" color="blue.400">
                   HERE
                 </Text>
@@ -120,8 +145,8 @@ function Rules() {
               target, regardless of who they are assigned.
             </ListItem>
             <ListItem>
-              Parents day (October 5th) will be a safe day. No kills will be
-              allowed on that day. The game will resume on October 6th.
+              Parents day (September 27th) will be a safe day. No kills will be
+              allowed on that day. The game will resume on September 28th.
             </ListItem>
           </UnorderedList>
         </ListItem>
@@ -143,7 +168,9 @@ function Rules() {
                 </ListItem>
                 <ListItem>
                   Practice and competition (during, and preparing for), but not
-                  travelling to/from.
+                  travelling to/from. Going from the locker room to field is
+                  considered safe as long as the player is visibly equipped for
+                  the practice/competition.
                 </ListItem>
                 <ListItem>
                   Own bedrooms, but common rooms, dorm hallways, and other's
@@ -155,11 +182,9 @@ function Rules() {
                   (including as you are prepping and finishing the exam).
                 </ListItem>
                 <ListItem>
-                  Showers are ONLY a safe zone if the target is actively
-                  showering. The shower must be turned on and the target must be
-                  in the shower in order to be safe. Brushing teeth, washing
-                  hands, and GRWM videos are fair game.
+                  Showers and restrooms ARE safe.
                 </ListItem>
+                <ListItem>Locker rooms are safe.</ListItem>
                 <ListItem>
                   The target cannot be forcibly physically removed from a safe
                   zone. The target is no longer safe once they move themself out
@@ -186,7 +211,7 @@ function Rules() {
               safety, no safe words, and no safe zones.
             </ListItem>
             <ListItem>
-              At the end of 10/10, if there is still more than a single person
+              At the end of 10/5, if there is still more than a single person
               remaining, there will be a duel between the two remaining
               participants with the most kills.
             </ListItem>
@@ -205,7 +230,7 @@ function Rules() {
             </ListItem>
             <ListItem>
               <ListIcon as={TimeIcon} color="green.500" />
-              START of ROUND 1: 9/16 9AM
+              START of ROUND 1: 9/15 9AM
             </ListItem>
             <ListItem>
               <ListIcon as={TimeIcon} color="red.500" />
@@ -217,27 +242,23 @@ function Rules() {
             </ListItem>
             <ListItem>
               <ListIcon as={TimeIcon} color="red.500" />
-              END of ROUND 2: 9/29 11:59PM (2 total kills required)
+              END of ROUND 2: 9/28 11:59PM (2 total kills required)
             </ListItem>
             <ListItem>
               <ListIcon as={TimeIcon} color="green.500" />
-              START of ROUND 3: 9/30 9AM
-            </ListItem>
-            <ListItem>
-              <ListIcon as={TimeIcon} color="green.500" />
-              SAFE DAY (Parents Day): 10/5
+              START of ROUND 3: 9/29 9AM
             </ListItem>
             <ListItem>
               <ListIcon as={TimeIcon} color="red.500" />
-              END of ROUND 3: 10/6 11:59PM (3 total kills required)
+              END of ROUND 3: 10/5 11:59PM (3 total kills required)
             </ListItem>
             <ListItem>
               <ListIcon as={TimeIcon} color="green.500" />
-              START of ANARCHY: 10/7 9AM
+              START of ANARCHY: 10/6 9AM
             </ListItem>
             <ListItem>
               <ListIcon as={TimeIcon} color="red.500" />
-              END of GAME: 10/10 11:59PM
+              END of GAME: 10/11 11:59PM
             </ListItem>
           </List>
         </ListItem>
@@ -250,7 +271,7 @@ function Rules() {
             </ListItem>
             <ListItem>
               If there is a dispute, it will be ruled by the Assassin Overlords
-              (Johnny & Tina).
+              (Johnny).
             </ListItem>
           </UnorderedList>
         </ListItem>
