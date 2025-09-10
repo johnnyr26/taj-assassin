@@ -75,7 +75,7 @@ function Login() {
           </Text>
           <Button
             onClick={async () => {
-              window.location.href = `${BASE_URL}/auth/google`;
+              window.location.href = `https://api.tajassassin.com/auth/google`;
             }}
           >
             Login With Google
